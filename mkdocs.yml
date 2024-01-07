@@ -1,21 +1,33 @@
-site_name: Alec McGregor
+site_name: Dr. Alec McGregor
 theme:
   name: material
+  custom_dir: overrides
+  favicon: images/favicon-face-only.png
+  language: en
+  #icon:
+  #  logo: images/android-chrome-512x512
   features:
     - content.code.annotate
     - content.code.copy
     - content.tabs.link
     - header.autohide
     - announce.dismiss
-    - navigation.footer
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
-    - navigation.tops
-    - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tops
+    - navigation.tracking
+    - navigation.tabs
+
+
+
+
+  plugins:
+    - typeset
+    - search
 
   palette:
 
@@ -34,3 +46,40 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
+
+markdown_extensions:
+   - admonition
+   - pymdownx.details
+   - pymdownx.superfences
+   - attr_list
+   - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+   - toc:
+      permalink: true
+
+copyright: Copyright &copy; 2023 Alec McGregor 
+
+extra:
+  generator: true
+  social:
+  - icon: fontawesome/brands/youtube
+    link: youtube.com
+  - icon: fontawesome/brands/twitter
+    link: twitter.com
+  - icon: fontawesome/brands/instagram
+    link: instagram.com 
+
+nav:
+  - Home: index.md
+  - Photogrammetry:
+    - photogrammetry/index.md
+    - 'Basics': photogrammetry/basics.md
+    - 'Shipwrecks': photogrammetry/shipwrecks.md
+    - 'AUVs': photogrammetry/auvs.md
+  - Youtube: https://youtube.com
+  - Instagram: https://instagram.com
+  - Twitter: https://twitter.com
+  - Sketchfab: https://sketchfab.com
+  - Github: https://github.com
+  - Test: test1.md
